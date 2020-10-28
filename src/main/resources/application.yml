@@ -1,0 +1,12 @@
+keycloak:
+  auth-server-url: http://localhost:8180/auth
+  realm: myapp
+  ssl-required: external
+  resource: app-myapp
+  credentials:
+    secret: secret
+  bearer-only: true
+
+spring:
+  application:
+    name: myapp
