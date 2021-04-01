@@ -1,0 +1,8 @@
+language: java
+
+jdk:
+  - openjdk11
+
+sudo: false # faster builds
+
+script: "./mvnw clean compile -DskipTests=true -Dmaven.javadoc.skip=true -B -V"

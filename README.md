@@ -1,3 +1,7 @@
+[![Build Status](https://travis-ci.com/claudioaltamura/keycloak-spring-boot-rest-example.svg?branch=master)](https://travis-ci.com/github/claudioaltamura/keycloak-spring-boot-rest-example)
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # keycloak-spring-boot-rest-example
 A Keycloak Spring Boot REST example
 
