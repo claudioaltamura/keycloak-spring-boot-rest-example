@@ -14,7 +14,8 @@
       <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
       <maven.compiler.source>11</maven.compiler.source>
       <maven.compiler.target>11</maven.compiler.target>
-      <spring-boot.version>2.3.4.RELEASE</spring-boot.version>
+      <spring-boot.version>2.4.4</spring-boot.version>
+      <keycloak-bom.version>12.0.4</keycloak-bom.version>
     </properties>
 
     <dependencyManagement>
@@ -31,7 +32,7 @@
             <dependency>
                 <groupId>org.keycloak.bom</groupId>
                 <artifactId>keycloak-adapter-bom</artifactId>
-                <version>11.0.2</version>
+                <version>${keycloak-bom.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
