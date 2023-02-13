@@ -5,6 +5,8 @@
 # keycloak-spring-boot-rest-example
 A Keycloak Spring Boot REST example
 
+upgraded, but without working spring security
+
 ## Build
 
     mvn clean compile
@@ -25,19 +27,19 @@ Security with Keycloak
 
 UI
 
-    http://localhost:8180/auth/
+    http://localhost:8180/
 
-    user: admin password: Pa55w0rd
+    user: admin password: admin
 
-    Add realm > Import: Select file conf/keycloak-realm.jspm > Create
+    realm conf/keycloak-realm.jspm is already imported 
 
 Get access token - simple user
 
     export access_token=$(\
-    curl -X POST 'http://localhost:8180/auth/realms/blueprint/protocol/openid-connect/token' \
+    curl -X POST 'http://localhost:8180/realms/myapp/protocol/openid-connect/token' \
      --header 'Content-Type: application/x-www-form-urlencoded' \
      --data-urlencode 'grant_type=password' \
-     --data-urlencode 'client_id=app-blueprint' \
+     --data-urlencode 'client_id=app-myapp' \
      --data-urlencode 'client_secret=secret' \
      --data-urlencode 'username=alice' \
      --data-urlencode 'password=alice' | jq --raw-output '.access_token' \
@@ -59,7 +61,7 @@ authorized rest request
 Get access token - admin
 
     export access_token=$(\
-    curl -X POST 'http://localhost:8180/auth/realms/myapp/protocol/openid-connect/token' \
+    curl -X POST 'http://localhost:8180/realms/myapp/protocol/openid-connect/token' \
      --header 'Content-Type: application/x-www-form-urlencoded' \
      --data-urlencode 'grant_type=password' \
      --data-urlencode 'client_id=app-myapp' \
